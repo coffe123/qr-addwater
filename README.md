@@ -2,6 +2,10 @@
 
 Scripts for adding water using 3D-RISM, and modeling for MD simulation.
 Before use, please double check the AMBER14+ is installed, and the $AMBERHOME is setted.
+Also, three sets of self-developed parameters are available: 
+EDO
+NO3-
+ACT-
 
 To use:
 1. Please find the force field parameters in the directory: $AMBERHOME/dat/rism1d/model/
