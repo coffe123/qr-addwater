@@ -1,0 +1,27 @@
+%nproc=8
+%mem=8GB
+%chk=edo.chk
+# B3LYP/6-31G* OPT=(calcall,tight,MaxCyc=200) SCF=tight
+integral=(grid=fine)
+
+Title: EDO
+
+0 1
+C   -13.852   6.223  28.649
+O   -14.976   5.767  27.895
+C   -12.661   5.329  28.485
+O   -12.981   4.012  28.912
+H   -14.093   6.263  29.588
+H   -13.619   7.120  28.362
+H   -14.781   5.744  27.099
+H   -12.390   5.314  27.554
+H   -11.921   5.672  29.010
+H   -13.601   3.722  28.460
+
+--Link1--
+%nproc=8
+%mem=8GB
+%chk=edo.chk
+#P guess=read geom=allcheck SCF=tight
+HF/6-31G* Pop=MK IOp(6/33=2,6/41=10,6/42=17)
+

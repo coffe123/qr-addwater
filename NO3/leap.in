@@ -1,0 +1,4 @@
+source leaprc.gaff
+loadamberparams NO3.frcmod
+loadamberprep NO3.prepc
+saveamberparm NO3 NO3.parm7 NO3.rst

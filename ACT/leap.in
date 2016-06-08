@@ -1,0 +1,4 @@
+source leaprc.gaff
+loadamberparams Acetate.frcmod
+loadamberprep Acetate.prepi
+saveamberparm ACT ACT.parm7 ACT.rst7

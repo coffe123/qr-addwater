@@ -1,0 +1,33 @@
+remark goes here
+MASS
+O2 16.000        0.434               same as o  
+C  12.010        0.616               same as c  
+CT 12.010        0.878               same as c3 
+HC 1.008         0.135               same as hc 
+
+BOND
+O2-C   648.00   1.214       same as c -o 
+C -CT  328.30   1.508       same as c -c3
+CT-HC  337.30   1.092       same as c3-hc
+
+ANGLE
+O2-C -CT   68.030     123.110   same as c3-c -o 
+O2-C -O2   78.170     130.380   same as o -c -o 
+C -CT-HC   47.200     109.680   same as c -c3-hc
+HC-CT-HC   39.430     108.350   same as hc-c3-hc
+
+DIHE
+O2-C -CT-HC   1    0.800         0.000          -1.000      same as hc-c3-c -o 
+O2-C -CT-HC   1    0.080       180.000           3.000      same as hc-c3-c -o 
+
+IMPROPER
+CT-O2-C -O2         1.1          180.0         2.0          Using default value
+
+NONBON
+  O2          1.6612  0.2100             same as o  
+  C           1.9080  0.0860             same as c  
+  CT          1.9080  0.1094             same as c3 
+  HC          1.4870  0.0157             same as hc 
+
+
+

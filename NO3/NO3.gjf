@@ -1,0 +1,21 @@
+%nproc=8
+%mem=8GB
+%chk=no3.chk
+# B3LYP/6-31G* OPT=(calcall,tight,MaxCyc=200) SCF=tight
+integral=(grid=fine)
+
+Title: NO3, 2-
+
+-1 1
+N       -16.665  19.865  24.447 
+O1      -16.139  19.944  23.315 
+O2      -16.518  20.865  25.221 
+O3      -17.262  18.910  24.830 
+
+--Link1--
+%nproc=8
+%mem=8GB
+%chk=no3.chk
+#P guess=read geom=allcheck SCF=tight
+HF/6-31G* Pop=MK IOp(6/33=2,6/41=10,6/42=17)
+

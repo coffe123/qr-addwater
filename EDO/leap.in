@@ -1,0 +1,4 @@
+source leaprc.gaff
+loadamberparams EDO.frcmod
+loadamberprep EDO.prepc
+saveamberparm EDO EDO.parm7 EDO.rst
