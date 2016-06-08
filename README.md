@@ -3,6 +3,7 @@
 Scripts for adding water using 3D-RISM, and modeling for MD simulation.
 Before use, please double check the AMBER14+ is installed, and the $AMBERHOME is setted.
 Also, three sets of self-developed parameters are available: 
+
 1.  EDO
 
 2.  NO3-
@@ -11,6 +12,7 @@ Also, three sets of self-developed parameters are available:
 
 
 To use:
+
 1. Please find the force field parameters in the directory: $AMBERHOME/dat/rism1d/model/
 If there is no parameter you want, you must use standard RESP method to fit partial charge, 
 and then use GAFF to create the .prep/.lib file and corresponding .frcmod file, 
