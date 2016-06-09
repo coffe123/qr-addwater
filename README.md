@@ -27,7 +27,7 @@ This file can be obtained by using phenix.fetch_pdb.
 It may be better to do a preliminary optimization before comparing the B-factor.
 
 4. Please note, the speed of RISM calculation is O(N^3), 
-so if one needs lots of different species, the better way is to do this severial times, 
+so if one needs to add lots of different species, the better way is to do this severial times, 
 and take the added molecules as part of the protein before doing following adding. 
 
 
