@@ -32,5 +32,5 @@ and take the added molecules as part of the protein before doing following addin
 
 
 
-Known bug: In the line 13, the mtz file may not contain characters "IOBS,SIGIOBS" but other ones. 
+Known bug: In the line 13 of b_factor.py, the mtz file may not contain characters "IOBS,SIGIOBS" but other ones. 
 Please change the content correspondingly.
