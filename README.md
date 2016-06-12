@@ -40,6 +40,12 @@ b. r_cut_crush=2.80
 
 The parameters are used for obtain proper volume during MD simulation. The finding of far water is arbitary, but the 2.80 is the sum of the radius of water molecule. Both of the cut off radius should be test extensively to give proper volume. The criteria of volume is within 0.3% relative error during MD. 
 
+To use the get_crush.py and delete_crush.py, one needs to prepare two sets of PDB files:
+
+a. A PDB file containing prime cell in the center of space
+
+b. Other 26 PDB files containing images of the prime cell surrounding around the prime cell. This can be done with the help of PropPDB in AMBER suit.
+
 6. After delete the redundant water molecules, one needs to use XtalSetup.sh to add some additional water molecules again, to fill out the vacuum bubbles in the prime cell. The number of water molecules can be adjusted in the parameter of AddToBox in AMBER suit. This parameter is also need to extensive test.
 
 7. The usage of the script XtalSetup.sh can be found in the AMBER website:
