@@ -1,3 +1,5 @@
+### Script by Pavel, modified by Yongle.
+
 from __future__ import division
 import sys,os
 import iotbx.pdb
