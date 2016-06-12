@@ -35,6 +35,7 @@ and take the added molecules as part of the protein before doing following addin
 5. After adding waters using 3D-RISM, please use get_farwater.py, delete_farwater.py, get_crush.py, and delete_crush.py to delete redundant waters. The redundant water molecules can come from two ways: 1st, the 3D-RISM I used does not deal with periodical boundary condition, so the far water molecules may not proper in the crystal environment. 2nd, after PBC added, some water molecules will get too close to the image molecules (image protein, image solvent, etc.). So it's better to delete both of the two types of water molecules. The current used parameters are:
 
 a. r_cut_far=3.70
+
 b. r_cut_crush=2.80
 
 The parameters are used for obtain proper volume during MD simulation. The finding of far water is arbitary, but the 2.80 is the sum of the radius of water molecule. Both of the cut off radius should be test extensively to give proper volume. The criteria of volume is within 0.3% relative error during MD. 
