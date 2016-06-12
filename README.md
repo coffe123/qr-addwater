@@ -32,7 +32,54 @@ It may be better to do a preliminary optimization before comparing the B-factor.
 so if one needs to add lots of different species, the better way is to do this severial times, 
 and take the added molecules as part of the protein before doing following adding. 
 
+5. After adding waters using 3D-RISM, please use get_farwater.py, delete_farwater.py, get_crush.py, and delete_crush.py to delete redundant waters. The redundant water molecules can come from two ways: 1st, the 3D-RISM I used does not deal with periodical boundary condition, so the far water molecules may not proper in the crystal environment. 2nd, after PBC added, some water molecules will get too close to the image molecules (image protein, image solvent, etc.). So it's better to delete both of the two types of water molecules. The current used parameters are:
 
+a. r_cut_far=3.70
+b. r_cut_crush=2.80
+
+The parameters are used for obtain proper volume during MD simulation. The finding of far water is arbitary, but the 2.80 is the sum of the radius of water molecule. Both of the cut off radius should be test extensively to give proper volume. The criteria of volume is within 0.3% relative error during MD. 
+
+6. After delete the redundant water molecules, one needs to use XtalSetup.sh to add some additional water molecules again, to fill out the vacuum bubbles in the prime cell. The number of water molecules can be adjusted in the parameter of AddToBox in AMBER suit. This parameter is also need to extensive test.
+
+quu..__
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >
+        |#'     `..'`..'          `###'        x:      /     /
+         \                                   xXX|     /    ./
+          \                                xXXX'|    /   ./
+          /`-.                                  `.  /   /
+         :    `-  ...........,                   | /  .'
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+                                    
 
 Known bug: In the line 13 of b_factor.py, the mtz file may not contain characters "IOBS,SIGIOBS" but other ones. 
 Please change the content correspondingly.
