@@ -56,3 +56,5 @@ http://ambermd.org/tutorials/advanced/tutorial13/XtalTutor1.html
 
 Known bug: In the line 13 of b_factor.py, the mtz file may not contain characters "IOBS,SIGIOBS" but other ones. 
 Please change the content correspondingly.
+
+8. A script for transforming the names used in Gromacs into AMBER's is ready.
